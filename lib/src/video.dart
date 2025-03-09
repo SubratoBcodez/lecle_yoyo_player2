@@ -274,7 +274,7 @@ class _YoYoPlayerState extends State<YoYoPlayer>
           // Horizontal screen
           fullScr = true;
           SystemChrome.setEnabledSystemUIMode(
-            SystemUiMode.manual,
+            SystemUiMode.immersiveSticky,
             overlays: [SystemUiOverlay.bottom],
           );
         
