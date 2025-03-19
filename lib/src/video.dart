@@ -278,14 +278,15 @@ class _YoYoPlayerState extends State<YoYoPlayer>
             // overlays: [SystemUiOverlay.bottom],
           );
         
-        } else if (orientation == Orientation.portrait) {
-          // Portrait screen
-          fullScr = false;
-          SystemChrome.setEnabledSystemUIMode(
-            SystemUiMode.manual,
-            overlays: SystemUiOverlay.values,
-          );
-        }
+        } 
+        // else if (orientation == Orientation.portrait) {
+        //   // Portrait screen
+        //   fullScr = false;
+        //   SystemChrome.setEnabledSystemUIMode(
+        //     SystemUiMode.manual,
+        //     overlays: SystemUiOverlay.values,
+        //   );
+        // }
 
         if (fullScr != fullScreen) {
           setState(() {
