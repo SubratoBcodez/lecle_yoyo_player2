@@ -275,7 +275,7 @@ class _YoYoPlayerState extends State<YoYoPlayer>
           fullScr = true;
           SystemChrome.setEnabledSystemUIMode(
             SystemUiMode.immersiveSticky,
-            overlays: [SystemUiOverlay.bottom],
+            // overlays: [SystemUiOverlay.bottom],
           );
         
         } else if (orientation == Orientation.portrait) {
