@@ -273,12 +273,25 @@ class _YoYoPlayerState extends State<YoYoPlayer>
         if (orientation == Orientation.landscape) {
           // Horizontal screen
           fullScr = true;
-          SystemChrome.setEnabledSystemUIMode(
-            SystemUiMode.immersiveSticky,
-            // overlays: [SystemUiOverlay.bottom],
-          );
+          SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ]);
+          // SystemChrome.setEnabledSystemUIMode(
+          //   SystemUiMode.immersiveSticky,
+          //   // overlays: [SystemUiOverlay.bottom],
+          // );
+          
         
-        } 
+        } else {
+           fullScr = false;
+          SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
+        }
         // else if (orientation == Orientation.portrait) {
         //   // Portrait screen
         //   fullScr = false;
